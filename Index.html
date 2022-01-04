@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="style.css">
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center pt-5">Register</h1>
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label for="inputfName" class="form-label">First Name:</label>
+                <input class="form-control" type="text" id="inputfname" required>
+            </div>
+            <div class="col-md-6">
+                <label for="inputlname" class="form-label">Last Name:</label>
+                <input class="form-control" type="text" id="inputlname" required>
+            </div>
+            <div class="col-12">
+                <label for="inputaddress" class="form-label">Address:</label>
+                <textarea type="text" class="form-control" id="inputaddress" required></textarea>
+            </div>
+            <div class="row g-3 ">
+                <div class="col-sm-6">
+                    <label for="inputcountry" class="form-label">Country:</label>
+                    <select id="inputcountry" class="form-select" required>
+                        <option selected>Choose country</option selected>
+                        <option value="Pakistan">Pakistan</option>
+                        <option>India</option>
+                        <option>Afghanistan</option>
+                        <option>U.S</option>
+                        <option>Canada</option>
+                    </select>
+                </div>
+                <div class="col-sm text-right">
+                    <label class="form-label" for="gender">Gender:</label><br>
+                    <input class="form-check-input" type="radio" for="radio" name="gridradio" id="m" value="male"
+                        checked>
+                    <label class="form-check-label" for="m">male</label>&nbsp;&nbsp;
+                    <input class="form-check-input" type="radio" for="radio" name="gridradio" id="f" value="female">
+                    <label class="form-check-label" for="f">female</label>
+                </div>
+            </div>
+            <div class="row mb-3 pt-3">
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1"
+                            onchange="document.getElementById('btn_submit').disabled = !this.checked;">
+                        <label class="form-check-label" for="gridCheck1">
+                            Accept our Terms & Policy
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-right p-3">
+                    <button type="button" id="btn_submit" class="btn btn-primary float-end m-3" disabled>Submit</button>
+                    <button type="reset" id="btn_cancel" class="btn btn-secondary float-end m-3">Cancel</button>
+                </div>
+        </form>
+    </div>
+    </div>
+
+    <!--Populating labels-->
+
+    <!-- <div class="container">
+            <h1 class="text-center pt-5">Register</h1>
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="populatefName" class="form-label">First Name:</label>
+                        <label id="populatefName" class="form-label"></label>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="populatelname" class="form-label">Last Name:</label>
+                        <label id="populatelname" class="form-label"></label>
+                    </div>
+                    <div class="col-12">
+                        <label for="populateaddress" class="form-label">Address:</label>
+                        <label id="populateaddress" class="form-label"></label>
+                    </div>
+                    <div class="row g-3 ">
+                        <div class="col-sm-6">
+                            <label for="populatecountry" class="form-label">Country:</label>
+                            <label id="populatecountry" class="form-label"></label>
+                        </div>
+                        <div class="col-sm text-right">
+                            <label class="form-label" for="populategender">Gender:</label>
+                            <label class="form-label" id="populategender"></label><br>
+                        </div>
+                    </div>
+                    <div class="row mb-3 pt-3">
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <label class="form-check-label" for="populategridCheck1">
+                                    Accept our Terms & Policy
+                                </label>
+                                <label class="form-check-label text-primary" id="populategridCheck1">
+                                    
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div> -->
+
+    <!--Populating Input fields-->
+    <div class="container">
+        <h1 class="text-center pt-5">Register</h1>
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label for="populateinputfName" class="form-label">First Name:</label>
+                <input class="form-control" type="text" id="populateinputfname" required>
+            </div>
+            <div class="col-md-6">
+                <label for="populateinputlname" class="form-label">Last Name:</label>
+                <input class="form-control" type="text" id="populateinputlname" required>
+            </div>
+            <div class="col-12">
+                <label for="populateinputaddress" class="form-label">Address:</label>
+                <textarea type="text" class="form-control" id="populateinputaddress" required></textarea>
+            </div>
+            <div class="row g-3 ">
+                <div class="col-sm-6">
+                    <label for="populateinputcountry" class="form-label">Country:</label>
+                    <select id="populateinputcountry" class="form-select" required>
+                        <option selected>Choose country</option selected>
+                        <option>Pakistan</option>
+                        <option>India</option>
+                        <option>Afghanistan</option>
+                        <option>U.S</option>
+                        <option>Canada</option>
+                    </select>
+                </div>
+                <div class="col-sm text-right">
+                    <label class="form-label" for="populateinputgender">Gender:</label><br>
+                    <input class="form-check-input" type="radio" for="radio" name="gridradio1" id="populatem"
+                        value="male">
+                    <label class="form-check-label" for="populatem">male</label>&nbsp;&nbsp;
+                    <input class="form-check-input" type="radio" for="radio" name="gridradio1" id="populatef"
+                        value="female">
+                    <label class="form-check-label" for="populatef">female</label>
+                </div>
+            </div>
+            <div class="row mb-3 pt-3">
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="populateinputgridCheck1"
+                            onchange="document.getElementById('btn_submit').disabled = !this.checked;">
+                        <label class="form-check-label" for="populateinputgridCheck1">
+                            Accept our Terms & Policy
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- iv class="col-md-12 text-right p-3">
+                    <button type="button" id="btn_submit" class="btn btn-primary float-end m-3" disabled>Submit</button>
+                     <button type="reset" id="btn_cancel" class="btn btn-secondary float-end m-3">Cancel</button>
+                </div> -->
+        </form>
+    </div>
+    </div>
+
+
+    <!--Javascript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+        document.getElementById("btn_submit").onclick = function () {
+            var myfname = document.getElementById("inputfname").value
+            var mylname = document.getElementById("inputlname").value
+
+
+            var Address = document.getElementById("inputaddress").value
+            // console.log(Address);
+
+            var country = document.getElementById("inputcountry").value
+            // console.log(country);
+
+            // if(gender1= document.getElementById('m').checked==true){
+            //     // console.log("male")
+            // }else if(gender2= document.getElementById('f').checked==true){
+            //     // console.log("female")
+            // }else{
+            //     // console.warn("gender not selected")
+            // }
+
+            var gender = document.getElementsByName('gridradio');
+            for (var radio of gender) {
+                if (radio.checked) {
+                    // console.log(radio.value)
+                    gender = radio.value
+                }
+            }
+
+
+            var checker = document.getElementById('gridCheck1').checked == true;
+            var submitbtn = document.getElementById('btn_submit');
+            checker.onchange = function () {
+                submitbtn.disabled = !this.checked;
+
+
+            };
+            var register = {
+                Firstname: myfname,
+                Lastname: mylname,
+                Address: Address,
+                Country: country,
+                Gender: gender,
+                Policy: checker
+            }
+            console.log(register);
+
+            //populate labels
+            // document.getElementById('populatefName').innerHTML = register.Firstname;
+            // document.getElementById('populatelname').innerHTML = register.Lastname;
+            // document.getElementById('populateaddress').innerHTML = register.Address;
+            // document.getElementById('populatecountry').innerHTML = register.Country;
+            // // document.getElementById('populategender').innerHTML = register.Gender;
+            // gridradio
+            // document.getElementById('populategridCheck1').innerHTML = register.Policy;
+
+            //populate Input Fields
+            //document.getElementById("populateinputfname").setAttribute(register.Firstname,"my default value")
+            document.getElementById("populateinputfname").value = register.Firstname;
+            document.getElementById("populateinputlname").value = register.Lastname;
+            document.getElementById("populateinputaddress").value = register.Address;
+            document.getElementById("populateinputcountry").value = register.Country;
+            //document.getElementsByTagName("gridratio1").checked = register.Gender;
+
+            if (register.Gender == 'male') {
+                document.getElementById("populatem").checked = true
+            } else {
+                document.getElementById("populatef").checked = true
+            }
+
+            document.getElementById('populateinputgridCheck1').checked = register.Policy
+        }
+    </script>
+
+</body>
+
+</html>
